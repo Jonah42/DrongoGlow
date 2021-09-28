@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DrongoGlow</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="send_button">Send</string>
+    <string name="action_connect">Connect</string>
+    <string name="page_solid_text">Solid</string>
+    <string name="page_pulse_text">Pulse</string>
+    <string name="page_rotate_text">Rotate</string>
+    <string name="page_volume_text">Volume</string>
+    <string name="page_frequency_text">Frequency</string>
+    <string name="page_custom_text">Custom</string>
+    <string name="primary_label_text">Primary Colour</string>
+    <string name="secondary_label_text">Secondary Colour</string>
+    <string name="period_label_text">Period</string>
+    <string name="speed_label_text">Speed</string>
+    <string name="width_label_text">Width</string>
+</resources>

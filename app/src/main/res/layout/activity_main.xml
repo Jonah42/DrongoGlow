@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ViewFlipper
+        android:id="@+id/vf"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/llExample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+        <include
+            android:id="@+id/firstView"
+            layout="@layout/solid" />
+
+        <include
+            android:id="@+id/secondView"
+            layout="@layout/pulse" />
+                <include android:id="@+id/thirdView" layout="@layout/rotate" />
+                <include android:id="@+id/fourthView" layout="@layout/volume" />
+                <include android:id="@+id/fifthView" layout="@layout/frequency" />
+                <include android:id="@+id/sixthView" layout="@layout/custom" />
+
+    </ViewFlipper>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#D6D6D6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/llExample">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/page_solid"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showSolid"
+                    android:text="@string/page_solid_text"
+                    android:textColor="#4A4A4A" />
+
+                <Button
+                    android:id="@+id/page_pulse"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showPulse"
+                    android:text="@string/page_pulse_text"
+                    android:textColor="#4A4A4A" />
+
+                <Button
+                    android:id="@+id/page_rotate"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showRotate"
+                    android:text="@string/page_rotate_text"
+                    android:textColor="#4A4A4A" />
+
+                <Button
+                    android:id="@+id/page_volume"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showVolume"
+                    android:text="@string/page_volume_text"
+                    android:textColor="#4A4A4A" />
+
+                <Button
+                    android:id="@+id/page_frequency"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showFrequency"
+                    android:text="@string/page_frequency_text"
+                    android:textColor="#4A4A4A" />
+
+                <Button
+                    android:id="@+id/page_custom"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="showCustom"
+                    android:text="@string/page_custom_text"
+                    android:textColor="#4A4A4A" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
